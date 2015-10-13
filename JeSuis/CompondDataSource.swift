@@ -47,6 +47,11 @@ public class CompoundDataSource: NSObject {
         set { self[indexPath.section] = newValue }
     }
 
+    public subscript (section: SectionOffsetting) -> UITableViewDataSource? {
+        get { return self[section.sectionOffset] }
+        set { self[section.sectionOffset] = newValue }
+    }
+
     private func tableView(tableView: UITableView, dataSourceForSection section: Int) -> UITableViewDataSource {
         let rootSections = rootDataSource.numberOfSectionsInTableView?(tableView) ?? 1
         return section < rootSections ? (dataSources[section] ?? rootDataSource) : dataSources[rootSections - 1]!
