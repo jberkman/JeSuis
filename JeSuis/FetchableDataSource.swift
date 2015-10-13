@@ -48,20 +48,24 @@ public protocol FetchableDataSource: SectionOffsetting {
 
 extension FetchableDataSource {
 
-    subscript (index: Int) -> Element {
+    public subscript (index: Int) -> Element {
         return fetchedResultsController!.fetchedObjects![index] as! Element
     }
 
-    subscript (indexPath: NSIndexPath) -> Element {
+    public subscript (indexPath: NSIndexPath) -> Element {
         return fetchedResultsController!.objectAtIndexPath(insetIndexPath(indexPath)) as! Element
     }
 
-    subscript (element: Element) -> NSIndexPath? {
+    public subscript (element: Element) -> NSIndexPath? {
         guard let indexPath = fetchedResultsController!.indexPathForObject(element) else { return nil }
         return offsetIndexPath(indexPath)
     }
 
-    mutating func reloadData() {
+    public var fetchedElements: [Element]? {
+        return fetchedResultsController?.fetchedObjects as? [Element]
+    }
+
+    public mutating func reloadData() {
         guard let managedObjectContext = managedObjectContext else { return }
         if fetchRequest.entity == nil {
             fetchRequest.entity = managedObjectContext.persistentStoreCoordinator?.managedObjectModel.entities.lazy.filter {
