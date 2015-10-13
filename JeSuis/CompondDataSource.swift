@@ -1,5 +1,5 @@
 //
-//  ProxyDataSource.swift
+//  CompoundDataSource.swift
 //  JeSuis
 //
 //  Created by jacob berkman on 2015-10-12.
@@ -12,7 +12,7 @@
 //  copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
 //
-//  The above copyright notice and this permission notice shall be included in
+//  The above copyright notice andç this permission notice shall be included in
 //  all copies or substantial portions of the Software.
 //
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -27,7 +27,7 @@
 import Foundation
 import UIKit
 
-public class ProxyDataSource: NSObject {
+public class CompoundDataSource: NSObject {
 
     private let rootDataSource: UITableViewDataSource
     private var dataSources = [Int: UITableViewDataSource]()
@@ -54,7 +54,7 @@ public class ProxyDataSource: NSObject {
 
 }
 
-extension ProxyDataSource: UITableViewDataSource {
+extension CompoundDataSource: UITableViewDataSource {
 
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let dataSource = self.tableView(tableView, dataSourceForSection: section)
@@ -94,7 +94,7 @@ extension ProxyDataSource: UITableViewDataSource {
 
 }
 
-public class StoryboardProxyDataSource: ProxyDataSource {
+public class StoryboardCompoundDataSource: CompoundDataSource {
 
     override public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return rootDataSource.tableView?(tableView, titleForHeaderInSection: section)

@@ -11,7 +11,7 @@
 		1684F2361BCC9937002B965F /* JeSuis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1684F22B1BCC9936002B965F /* JeSuis.framework */; settings = {ASSET_TAGS = (); }; };
 		1684F23B1BCC9937002B965F /* JeSuisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F23A1BCC9937002B965F /* JeSuisTests.swift */; };
 		1684F2461BCC9A5F002B965F /* StaticDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F2451BCC9A5F002B965F /* StaticDataSource.swift */; settings = {ASSET_TAGS = (); }; };
-		1684F2481BCC9C14002B965F /* ProxyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F2471BCC9C14002B965F /* ProxyDataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		1684F2481BCC9C14002B965F /* CompondDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F2471BCC9C14002B965F /* CompondDataSource.swift */; settings = {ASSET_TAGS = (); }; };
 		1684F24A1BCC9C46002B965F /* SectionOffsetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F2491BCC9C46002B965F /* SectionOffsetting.swift */; settings = {ASSET_TAGS = (); }; };
 		1684F24C1BCCA312002B965F /* FetchableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F24B1BCCA312002B965F /* FetchableDataSource.swift */; settings = {ASSET_TAGS = (); }; };
 		1684F24E1BCCA612002B965F /* FetchedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1684F24D1BCCA612002B965F /* FetchedDataSource.swift */; settings = {ASSET_TAGS = (); }; };
@@ -35,7 +35,7 @@
 		1684F23A1BCC9937002B965F /* JeSuisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeSuisTests.swift; sourceTree = "<group>"; };
 		1684F23C1BCC9937002B965F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1684F2451BCC9A5F002B965F /* StaticDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticDataSource.swift; sourceTree = "<group>"; };
-		1684F2471BCC9C14002B965F /* ProxyDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyDataSource.swift; sourceTree = "<group>"; };
+		1684F2471BCC9C14002B965F /* CompondDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompondDataSource.swift; sourceTree = "<group>"; };
 		1684F2491BCC9C46002B965F /* SectionOffsetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionOffsetting.swift; sourceTree = "<group>"; };
 		1684F24B1BCCA312002B965F /* FetchableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchableDataSource.swift; sourceTree = "<group>"; };
 		1684F24D1BCCA612002B965F /* FetchedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedDataSource.swift; sourceTree = "<group>"; };
@@ -81,11 +81,11 @@
 		1684F22D1BCC9937002B965F /* JeSuis */ = {
 			isa = PBXGroup;
 			children = (
+				1684F2471BCC9C14002B965F /* CompondDataSource.swift */,
 				1684F24B1BCCA312002B965F /* FetchableDataSource.swift */,
 				1684F24D1BCCA612002B965F /* FetchedDataSource.swift */,
 				1684F2301BCC9937002B965F /* Info.plist */,
 				1684F22E1BCC9937002B965F /* JeSuis.h */,
-				1684F2471BCC9C14002B965F /* ProxyDataSource.swift */,
 				1684F2491BCC9C46002B965F /* SectionOffsetting.swift */,
 				1684F2451BCC9A5F002B965F /* StaticDataSource.swift */,
 			);
@@ -213,7 +213,7 @@
 				1684F24C1BCCA312002B965F /* FetchableDataSource.swift in Sources */,
 				1684F2461BCC9A5F002B965F /* StaticDataSource.swift in Sources */,
 				1684F24E1BCCA612002B965F /* FetchedDataSource.swift in Sources */,
-				1684F2481BCC9C14002B965F /* ProxyDataSource.swift in Sources */,
+				1684F2481BCC9C14002B965F /* CompondDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
