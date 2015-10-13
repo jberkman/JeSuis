@@ -79,7 +79,7 @@ public class StaticDataSource: NSObject, SectionOffsetting {
 extension StaticDataSource: UITableViewDataSource {
 
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return sections.count
+        return sectionOffset + sections.count
     }
 
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
