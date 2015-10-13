@@ -39,7 +39,7 @@ public class FetchedDataSource<Element: NSManagedObject, Cell: UITableViewCell>:
 
     public let sectionOffset: Int
 
-    init(sectionOffset: Int = 0) {
+    public init(sectionOffset: Int = 0) {
         assert(sectionOffset >= 0)
         self.sectionOffset = sectionOffset
         super.init()
