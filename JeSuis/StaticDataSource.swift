@@ -99,5 +99,9 @@ extension StaticDataSource: UITableViewDataSource {
     public func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return self[section].footerTitle
     }
+
+    public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
     
 }
